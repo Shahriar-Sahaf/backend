@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Welcome, {{ current_user.username }}!</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.input1.label }} {{ form.input1() }}<br>
+    {{ form.input2.label }} {{ form.input2() }}<br>
+    {{ form.input3.label }} {{ form.input3() }}<br>
+    {{ form.submit() }}
+</form>
+<a href="{{ url_for('auth.logout') }}">Logout</a>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+<h1>Result: {{ result }}</h1>
+<a href="{{ url_for('main.home') }}">Back to Home</a>
+{% endblock %}
